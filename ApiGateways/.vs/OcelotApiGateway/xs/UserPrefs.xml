@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{8428BE28-8351-4874-9821-7960558FA8AB}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <DisabledProjects>
+    <String>../../Services/Identity/Identity.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.ItemProperties.OcelotApiGateway PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="OcelotApiGateway" expanded="True">
+            <Node name="OcelotApiGateway" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
