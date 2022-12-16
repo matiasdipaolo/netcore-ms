@@ -5,8 +5,6 @@ VisualStudioVersion = 25.0.1704.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGateway", "OcelotApiGateway\OcelotApiGateway.csproj", "{8428BE28-8351-4874-9821-7960558FA8AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity", "..\..\Services\Identity\Identity.csproj", "{98902642-5CE7-41F2-AE3F-2529E473DE03}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity", "..\Services\Identity\Identity.csproj", "{DF8BC3A6-9783-472C-AC9E-73CE0190EA5D}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{8428BE28-8351-4874-9821-7960558FA8AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8428BE28-8351-4874-9821-7960558FA8AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8428BE28-8351-4874-9821-7960558FA8AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{98902642-5CE7-41F2-AE3F-2529E473DE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{98902642-5CE7-41F2-AE3F-2529E473DE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98902642-5CE7-41F2-AE3F-2529E473DE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{98902642-5CE7-41F2-AE3F-2529E473DE03}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DF8BC3A6-9783-472C-AC9E-73CE0190EA5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DF8BC3A6-9783-472C-AC9E-73CE0190EA5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF8BC3A6-9783-472C-AC9E-73CE0190EA5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
