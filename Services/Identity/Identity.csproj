@@ -30,6 +30,7 @@
     <None Remove="Data\Persistence\" />
     <None Remove="Data\Persistence\Interfaces\" />
     <None Remove="DTOs\" />
+    <None Remove="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -39,5 +40,6 @@
     <Folder Include="Data\Persistence\" />
     <Folder Include="Data\Persistence\Interfaces\" />
     <Folder Include="DTOs\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>

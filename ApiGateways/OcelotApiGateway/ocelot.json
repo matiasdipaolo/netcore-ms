@@ -4,14 +4,14 @@
   },
   "Routes": [
     {
-      "UpstreamPathTemplate": "/api/healtz",
-      "UpstreamHttpMethod": [ "Get" ],
-      "DownstreamPathTemplate": "/api/healtz",
-      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/v1/auth",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/v1/auth",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5031
+          "Port": 5040
         }
       ]
     }
