@@ -1,4 +1,6 @@
 ﻿
+using Identity.Data;
+
 namespace Identity;
 
 public class Program
@@ -13,6 +15,9 @@ public class Program
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+
+        //Dependecy injection
+        builder.Services.AddSingleton<IUserRepository, UserRepository>();
 
         var app = builder.Build();
 

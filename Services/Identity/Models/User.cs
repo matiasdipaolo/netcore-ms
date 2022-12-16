@@ -3,8 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace Identity.Models
 {
-	public class User
-	{
+    public class User
+    {
+        [key]
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
