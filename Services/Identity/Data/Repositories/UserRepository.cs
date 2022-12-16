@@ -1,23 +1,21 @@
 ﻿using System;
+using Identity.Data.Repositories;
 using Identity.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Identity.Data
 {
-	public class UserRepository : IUserRepository
-	{
-		public UserRepository()
-		{
-		}
-
-        public List<User> GetUsers()
+	public class UserRepository : RepositoryBase<User> , IUserRepository
+    {
+		public UserRepository(IdentityApiDBContext dbContext) : base(dbContext)
         {
-            using (var context = new IdentityApiDBContext()) //WTFFF!!
-            {
-                var list = context.User
-                    .Include(a => a.Books)
-                    .ToList();
-                return list;
-            }
+        }
+
+        public async Task<User> GetUser(string userName)
+        {
+            var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Username == userName);
+            return user;
+
         }
     }
 }

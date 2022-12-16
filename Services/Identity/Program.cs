@@ -16,8 +16,16 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
+        #region Repositories
         //Dependecy injection
-        builder.Services.AddSingleton<IUserRepository, UserRepository>();
+        // Using the singleton lifetime for the repository could cause you serious
+        // concurrency problems when your DbContext is set to scoped (InstancePerLifetimeScope)
+        // lifetime (the default lifetimes for a DBContext);
+        builder.Services.AddDbContext<IdentityApiDBContext>();
+        // Registering a Repository in Autofac IoC container
+        builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+        #endregion
 
         var app = builder.Build();
 
