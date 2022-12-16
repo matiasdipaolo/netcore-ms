@@ -13,7 +13,7 @@ namespace Identity.Data
 
         public async Task<User> GetUser(string userName)
         {
-            var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.Username == userName);
+            var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.UserName == userName);
             return user;
 
         }

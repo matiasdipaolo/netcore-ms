@@ -29,6 +29,7 @@
     <None Remove="Data\Repositories\Interfaces\" />
     <None Remove="Data\Persistence\" />
     <None Remove="Data\Persistence\Interfaces\" />
+    <None Remove="DTOs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -37,5 +38,6 @@
     <Folder Include="Data\Repositories\Interfaces\" />
     <Folder Include="Data\Persistence\" />
     <Folder Include="Data\Persistence\Interfaces\" />
+    <Folder Include="DTOs\" />
   </ItemGroup>
 </Project>
