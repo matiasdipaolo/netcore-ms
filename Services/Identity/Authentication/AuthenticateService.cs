@@ -20,6 +20,7 @@ namespace Identity.JWTAuth
             Configuration = configuration;
         }
 
+        // @Todo in next verision
         public string CreateRefreshToken()
         {
             throw new NotImplementedException();
@@ -37,6 +38,7 @@ namespace Identity.JWTAuth
             {
                 throw new InvalidOperationException("Invalid AccessExpiration in config file");
             }
+            // see: https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet/blob/d2361e5dcd1abbf6d0ea441cdb2e7404166b122c/src/System.IdentityModel.Tokens.Jwt/ClaimTypeMapping.cs#L61
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[] {
