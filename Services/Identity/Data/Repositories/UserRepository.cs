@@ -11,9 +11,18 @@ namespace Identity.Data
         {
         }
 
-        public async Task<User> GetUser(string userName)
+        public async Task<User> GetUser(string UserName)
         {
-            var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.UserName == userName);
+            var user = await _dbContext.Users.FirstOrDefaultAsync(x => x.UserName == UserName);
+            return user;
+
+        }
+
+        public async Task<User> GetUserAndCheckPasswordAsync(string UserName,string Password)
+        {
+            var user = await _dbContext.Users.FirstOrDefaultAsync(x =>
+                            x.UserName == UserName &&
+                            x.Password == Password);
             return user;
 
         }

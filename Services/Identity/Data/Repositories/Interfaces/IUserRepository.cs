@@ -6,7 +6,8 @@ namespace Identity.Data
 {
 	public interface IUserRepository : IAsyncRepository<User>
     {
-        public Task<User> GetUser(string userName);
+        public Task<User> GetUser(string UserName);
+        public Task<User> GetUserAndCheckPasswordAsync(string UserName, string Password);
     }
 }
 

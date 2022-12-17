@@ -16,6 +16,7 @@ public class Program
         builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
         // Add Ocelot as a Service and the Ocelot cache
         builder.Services.AddOcelot(builder.Configuration)
+        
         .AddCacheManager(x =>
          {
                 x.WithDictionaryHandle();

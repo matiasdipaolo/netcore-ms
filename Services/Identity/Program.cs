@@ -1,5 +1,11 @@
 ﻿
+using System.Text;
 using Identity.Data;
+using Identity.JWTAuth;
+using Identity.JWTAuth.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Identity;
 
@@ -27,6 +33,33 @@ public class Program
 
         #endregion
 
+        #region JWT AUTH
+
+        builder.Services
+        .AddHttpContextAccessor()
+        .AddAuthorization()
+        .AddAuthentication(x =>
+         {
+             x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+             x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+         }).AddJwtBearer(options =>
+         {
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidateAudience = false,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                ValidAudience = builder.Configuration["Jwt:Audience"],
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+            };
+         });
+
+        #endregion
+
+        builder.Services.AddScoped<IAuthenticateService, AuthenticateService>();
+
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -37,6 +70,8 @@ public class Program
         }
 
         app.UseHttpsRedirection();
+
+        app.UseAuthentication();
 
         app.UseAuthorization();
 

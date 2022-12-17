@@ -13,7 +13,7 @@ namespace Identity.Migrations
         {
             migrationBuilder.Sql(@"  
                 INSERT INTO Users(FirstName,LastName,Username,Password )
-                VALUES('Jhon','Doe','juandoe','123456') ");
+                VALUES('John','Doe','juandoe','123456') ");
         }
 
         /// <inheritdoc />

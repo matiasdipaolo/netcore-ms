@@ -17,6 +17,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +32,11 @@
     <None Remove="Data\Persistence\Interfaces\" />
     <None Remove="DTOs\" />
     <None Remove="Properties\" />
+    <None Remove="JWTAuth\Interfaces\" />
+    <None Remove="Authentication\Services\" />
+    <None Remove="Authentication\Services\Interfaces\" />
+    <None Remove="Authentication\Models\" />
+    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -41,5 +47,9 @@
     <Folder Include="Data\Persistence\Interfaces\" />
     <Folder Include="DTOs\" />
     <Folder Include="Properties\" />
+    <Folder Include="Authentication\Interfaces\" />
+    <Folder Include="Authentication\Services\" />
+    <Folder Include="Authentication\Services\Interfaces\" />
+    <Folder Include="Authentication\Models\" />
   </ItemGroup>
 </Project>
