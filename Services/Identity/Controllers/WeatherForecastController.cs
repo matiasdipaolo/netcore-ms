@@ -5,9 +5,10 @@ namespace Identity.Controllers;
 
 [ApiController]
 [Authorize]
-[Route("[controller]")]
+[Route("api/v1/WeatherForecast")]
 public class WeatherForecastController : ControllerBase
 {
+    // This endpoint is intentionally here for auth testing as part of this example.
     private static readonly string[] Summaries = new[]
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"

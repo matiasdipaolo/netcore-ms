@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# Project-specific files
+Services/Identity/obj/
+Services/Identity/bin/
+ApiGateways/OcelotApiGateway/bin/
+
+
 # User-specific files
 *.rsuser
 *.suo

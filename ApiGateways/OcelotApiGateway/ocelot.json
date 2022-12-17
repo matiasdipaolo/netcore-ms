@@ -2,11 +2,24 @@
   "GlobalConfiguration": {
     "BaseUrl": "https://localhost:5030"
   },
+  // Identity API
   "Routes": [
     {
       "UpstreamPathTemplate": "/api/v1/auth",
       "UpstreamHttpMethod": [ "POST" ],
       "DownstreamPathTemplate": "/api/v1/auth",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5040
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/WeatherForecast",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/v1/WeatherForecast",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {

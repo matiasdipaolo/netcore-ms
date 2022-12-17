@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Models\" />
     <None Remove="Data\" />
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
@@ -35,11 +34,11 @@
     <None Remove="JWTAuth\Interfaces\" />
     <None Remove="Authentication\Services\" />
     <None Remove="Authentication\Services\Interfaces\" />
-    <None Remove="Authentication\Models\" />
     <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <None Remove="Utils\" />
+    <None Remove="Utils\Cryptography\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Data\" />
     <Folder Include="Data\Repositories\" />
     <Folder Include="Data\Repositories\Interfaces\" />
@@ -50,6 +49,7 @@
     <Folder Include="Authentication\Interfaces\" />
     <Folder Include="Authentication\Services\" />
     <Folder Include="Authentication\Services\Interfaces\" />
-    <Folder Include="Authentication\Models\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Utils\Cryptography\" />
   </ItemGroup>
 </Project>
