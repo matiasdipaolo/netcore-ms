@@ -1,0 +1,28 @@
+﻿{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5030"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/v1/auth",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/v1/auth",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5040
+        }
+      ]
+    }
+  ],
+  "RateLimitOptions": {
+    "EnableRateLimiting": true,
+    "Period": "10s",
+    "PeriodTimespan": 10,
+    "Limit": 3
+  },
+  "FileCacheOptions": {
+    "TtlSeconds": 15
+  }
+}
