@@ -5,7 +5,11 @@ VisualStudioVersion = 25.0.1704.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGateway", "OcelotApiGateway\OcelotApiGateway.csproj", "{8428BE28-8351-4874-9821-7960558FA8AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity", "..\Services\Identity\Identity.csproj", "{DF8BC3A6-9783-472C-AC9E-73CE0190EA5D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{32CD8DCD-D3F8-47F2-904B-0E4A0A8F2D84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity", "..\Services\Identity\Identity.csproj", "{17EB79CF-C0B5-4A65-A2ED-21E379CED197}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Tests", "..\Services\Identity.Tests\Identity.Tests.csproj", "{CA2242D6-4C0B-461D-BEE5-43991BCB16E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +21,14 @@ Global
 		{8428BE28-8351-4874-9821-7960558FA8AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8428BE28-8351-4874-9821-7960558FA8AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8428BE28-8351-4874-9821-7960558FA8AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DF8BC3A6-9783-472C-AC9E-73CE0190EA5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF8BC3A6-9783-472C-AC9E-73CE0190EA5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF8BC3A6-9783-472C-AC9E-73CE0190EA5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF8BC3A6-9783-472C-AC9E-73CE0190EA5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17EB79CF-C0B5-4A65-A2ED-21E379CED197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17EB79CF-C0B5-4A65-A2ED-21E379CED197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17EB79CF-C0B5-4A65-A2ED-21E379CED197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17EB79CF-C0B5-4A65-A2ED-21E379CED197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA2242D6-4C0B-461D-BEE5-43991BCB16E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA2242D6-4C0B-461D-BEE5-43991BCB16E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA2242D6-4C0B-461D-BEE5-43991BCB16E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA2242D6-4C0B-461D-BEE5-43991BCB16E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +40,9 @@ Global
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{17EB79CF-C0B5-4A65-A2ED-21E379CED197} = {32CD8DCD-D3F8-47F2-904B-0E4A0A8F2D84}
+		{CA2242D6-4C0B-461D-BEE5-43991BCB16E9} = {32CD8DCD-D3F8-47F2-904B-0E4A0A8F2D84}
 	EndGlobalSection
 EndGlobal
