@@ -17,7 +17,12 @@ public class AuthenticationServiceTest
 
     public AuthenticationServiceTest()
     {
-          _sut = new AuthenticateService(Configuration);
+        var configuration = new ConfigurationBuilder()
+          .SetBasePath(Directory.GetCurrentDirectory())
+          .AddJsonFile("appsettings.json")
+          .Build();
+        Configuration = configuration;
+        _sut = new AuthenticateService(configuration);
     }
 
  
