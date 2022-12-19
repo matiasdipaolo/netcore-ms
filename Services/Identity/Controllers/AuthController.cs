@@ -6,6 +6,7 @@ using Identity.Data;
 using Identity.DTOs;
 using Identity.JWTAuth.Interfaces;
 using Identity.Models;
+using Identity.Utils.Cryptography;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
@@ -36,9 +37,9 @@ namespace Identity.Controllers
             {
                 try
                 {
-                    // Very credencials
-                    var userObj = await _repository.GetUserAndCheckPasswordAsync(User.UserName, User.Password);
-
+                    // Verify user credencials
+                    var userObj = await _repository.GetUserAndCheckPasswordAsync(User.UserName, CSha512.getCSha512(  User.Password));
+                    
                     if (userObj is null)
                     {
                         return StatusCode(StatusCodes.Status403Forbidden, "User or password incorrect");
