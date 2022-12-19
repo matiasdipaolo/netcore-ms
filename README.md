@@ -16,7 +16,7 @@ Technology:
 - .Net Core 7
 - Entity Framework (EF) Core
 - Ocelot
-- net
+- XUnit 
 
 **Database:**
 
